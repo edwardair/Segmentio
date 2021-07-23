@@ -198,7 +198,7 @@ public struct SegmentioOptions {
     var labelTextAlignment: NSTextAlignment
     var labelTextNumberOfLines: Int
     var states: SegmentioStates
-    var animationDuration: CFTimeInterval
+    public var animationDuration: CFTimeInterval
     var userInterractionEnabled: Bool
 
     public init() {

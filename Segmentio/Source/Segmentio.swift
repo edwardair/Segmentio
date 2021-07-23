@@ -39,9 +39,9 @@ open class Segmentio: UIView {
 
     open private(set) var segmentioItems = [SegmentioItem]()
     private var segmentioCollectionView: UICollectionView?
-    private var segmentioOptions = SegmentioOptions()
+    public var segmentioOptions = SegmentioOptions()
     private var segmentioStyle = SegmentioStyle.imageOverLabel
-    private var isPerformingScrollAnimation = false
+    public var isPerformingScrollAnimation = false
     private var isCollectionViewScrolling = false
     private var didScrollToSelectedItem = false
     
