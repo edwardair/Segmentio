@@ -47,8 +47,8 @@ open class Segmentio: UIView {
     
     private var topSeparatorView: UIView?
     private var bottomSeparatorView: UIView?
-    private var indicatorLayer: CAShapeLayer?
-    private var selectedLayer: CAShapeLayer?
+    public var indicatorLayer: CAShapeLayer?
+    public var selectedLayer: CAShapeLayer?
     
     private var isRTL: Bool {
         if #available(iOS 9.0, *) {
@@ -322,7 +322,7 @@ open class Segmentio: UIView {
     
     // MARK: CAShapeLayers setup
 
-    private func setupShapeLayer(shapeLayer: CAShapeLayer, backgroundColor: UIColor, height: CGFloat,
+    open func setupShapeLayer(shapeLayer: CAShapeLayer, backgroundColor: UIColor, height: CGFloat,
                                  sublayer: CALayer, rounded: Bool = false) {
         shapeLayer.fillColor = backgroundColor.cgColor
         shapeLayer.strokeColor = backgroundColor.cgColor
@@ -443,7 +443,7 @@ open class Segmentio: UIView {
     
     // MARK: Move shape layer
     
-    private func moveShapeLayer(_ shapeLayer: CAShapeLayer, startPoint: CGPoint, endPoint: CGPoint,
+    open func moveShapeLayer(_ shapeLayer: CAShapeLayer, startPoint: CGPoint, endPoint: CGPoint,
                                 animated: Bool = false, roundedCorners: Bool = false) {
         var endPointWithVerticalSeparator = endPoint
         endPointWithVerticalSeparator.x = endPoint.x - 1
